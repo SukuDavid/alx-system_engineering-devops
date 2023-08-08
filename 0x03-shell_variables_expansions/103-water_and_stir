@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ibase=water;obase=10;$WATER+ibase=stir;obase=10;$STIR" | bc | xargs -I{} echo "ibase=10;obase=bestchol;{}" | bc
+printf "ibase=water;obase=10;%s+ibase=stir;obase=10;%s" "$WATER" "$STIR" | bc | xargs -I{} printf "ibase=10;obase=bestchol;{}" | bc
