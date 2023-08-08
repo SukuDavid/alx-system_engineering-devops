@@ -1,2 +1,2 @@
 #!/bin/bash
-bestchol=$((WATER + STIR)); echo "bestchol=$bestchol"
+bestchol=$(printf '%s\n' "$WATER" "$STIR" | tr 'waterstir' '0123456789' | tr -d '\n'); echo "bestchol=$bestchol"
