@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "bestchol=%s\n" $(($WATER + $STIR)) | tr -d '\n' | tr -d -c '0-9A-Za-z=\n'
+bestchol=$((WATER + STIR)); echo "bestchol=$bestchol"
