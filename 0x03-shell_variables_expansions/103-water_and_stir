@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "ibase=water;obase=10;%s+ibase=stir;obase=10;%s" "$WATER" "$STIR" | bc | xargs -I{} printf "ibase=10;obase=bestchol;{}" | bc
+printf "bestchol=%s\n" $(($WATER + $STIR)) | tr -d '\n' | tr -d -c '0-9A-Za-z=\n'
